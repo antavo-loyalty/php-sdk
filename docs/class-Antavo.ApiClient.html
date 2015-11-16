@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Antavo\ApiClient</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Antavo.html">
+						Antavo					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHP.html">
+						PHP					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Antavo.ApiClient.html">ApiClient</a></li>
+				<li><a href="class-Antavo.RestClient.html">RestClient</a></li>
+				<li><a href="class-Antavo.Token.html">Token</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Antavo.ApiClientException.html">ApiClientException</a></li>
+				<li><a href="class-Antavo.ExpiredTokenException.html">ExpiredTokenException</a></li>
+				<li><a href="class-Antavo.InvalidTokenDataException.html">InvalidTokenDataException</a></li>
+				<li><a href="class-Antavo.InvalidTokenException.html">InvalidTokenException</a></li>
+				<li><a href="class-Antavo.RestClientException.html">RestClientException</a></li>
+				<li><a href="class-Antavo.RestClientParserException.html">RestClientParserException</a></li>
+				<li><a href="class-Antavo.RestClientStatusCodeException.html">RestClientStatusCodeException</a></li>
+				<li><a href="class-Antavo.TokenException.html">TokenException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Antavo.html" title="Summary of Antavo"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class ApiClient</h1>
+
+
+	<div class="description">
+	<p>Antavo Loyalty API client class.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Antavo.RestClient.html"><span>Antavo\RestClient</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Antavo\ApiClient</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-Antavo.html">Antavo</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Antavo.ApiClient.html#4-140" title="Go to source code">ApiClient.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Antavo.ApiClient.html#30-39" title="Go to source code">__construct</a>( <span>string <var>$api_key</var></span>, <span>string <var>$secret</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructs client object: sets API credentials.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructs client object: sets API credentials.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$api_key</var></dt>
+					<dd>Antavo Loyalty API key.</dd>
+					<dt><var>$secret</var></dt>
+					<dd>API secret.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="call" id="_call">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_call">#</a>
+		<code><a href="source-class-Antavo.ApiClient.html#41-51" title="Go to source code">call</a>( <span>string <var>$method</var></span>, <span>string <var>$url</var></span>, <span>array|string <var>$data</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$curl_options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Performs an API request.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs an API request.</p>
+
+<p>It automatically appends <tt>api_key</tt> and calculated signature to
+request data.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd>HTTP method to use.</dd>
+					<dt><var>$url</var></dt>
+					<dd><p>URL to send request to. It is prefixed with
+the <tt>base_url</tt> unless it starts with a URL scheme.</p></dd>
+					<dt><var>$data</var></dt>
+					<dd><p>Data to send with request. It is sent as a
+request entity where allowed, or appended as a query string otherwise.</p></dd>
+					<dt><var>$curl_options</var></dt>
+					<dd><p>Additional cURL options for current request
+only.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-LogicException.html">LogicException</a></code><br>If PHP cURL extension is not loaded.<br>
+					<code><a href="class-Antavo.RestClientException.html">Antavo\RestClientException</a></code><br><p>If an error occurred during
+processing response.</p>
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Antavo.RestClient.html#_call">Antavo\RestClient::call()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="optInCustomer" id="_optInCustomer">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_optInCustomer">#</a>
+		<code><a href="source-class-Antavo.ApiClient.html#53-71" title="Go to source code">optInCustomer</a>( <span>string <var>$customer</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Posts an <a href="https://docs.antavo.com/api/events/opt_in">opt-in event</a>
+to the Events API.</p>
+
+<pre><span class="php-var">$client</span>-&gt;optInCustomer(<span class="php-quote">'8eb1b522'</span>, <span class="php-keyword1">array</span>(
+    <span class="php-comment">// Providing an email address is mandatory.</span>
+    <span class="php-quote">'email'</span> =&gt; <span class="php-quote">'john.doe@example.com'</span>
+));</pre>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Posts an <a href="https://docs.antavo.com/api/events/opt_in">opt-in event</a>
+to the Events API.</p>
+
+<pre><span class="php-var">$client</span>-&gt;optInCustomer(<span class="php-quote">'8eb1b522'</span>, <span class="php-keyword1">array</span>(
+    <span class="php-comment">// Providing an email address is mandatory.</span>
+    <span class="php-quote">'email'</span> =&gt; <span class="php-quote">'john.doe@example.com'</span>
+));</pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$customer</var></dt>
+					<dd>Unique customer ID.</dd>
+					<dt><var>$data</var></dt>
+					<dd><p>Custom data to store with the event. See
+<a href="https://docs.antavo.com/api/events/opt_in">event documentation</a>
+for required an optional keys.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="optOutCustomer" id="_optOutCustomer">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_optOutCustomer">#</a>
+		<code><a href="source-class-Antavo.ApiClient.html#73-90" title="Go to source code">optOutCustomer</a>( <span>string <var>$customer</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Posts an <a href="https://docs.antavo.com/api/events/opt_out">opt-out event</a>
+to the Events API.</p>
+
+<pre><span class="php-var">$client</span>-&gt;optOutCustomer(<span class="php-quote">'8eb1b522'</span>, <span class="php-keyword1">array</span>(
+    <span class="php-quote">'reason'</span> =&gt; <span class="php-quote">'Not interested'</span>
+));</pre>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Posts an <a href="https://docs.antavo.com/api/events/opt_out">opt-out event</a>
+to the Events API.</p>
+
+<pre><span class="php-var">$client</span>-&gt;optOutCustomer(<span class="php-quote">'8eb1b522'</span>, <span class="php-keyword1">array</span>(
+    <span class="php-quote">'reason'</span> =&gt; <span class="php-quote">'Not interested'</span>
+));</pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$customer</var></dt>
+					<dd>Unique customer ID.</dd>
+					<dt><var>$data</var></dt>
+					<dd><p>Custom data to store with the event. See
+<a href="https://docs.antavo.com/api/events/opt_out">event documentation</a>
+for required an optional keys.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="postEvent" id="_postEvent">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_postEvent">#</a>
+		<code><a href="source-class-Antavo.ApiClient.html#92-121" title="Go to source code">postEvent</a>( <span>string <var>$action</var></span>, <span>string <var>$customer</var></span>, <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Posts an event to the <a href="https://docs.antavo.com/api/events">Antavo
+Loyalty Events API</a>.</p>
+
+<pre><span class="php-var">$customer</span> = <span class="php-keyword1">array</span>(
+    <span class="php-quote">'id'</span> =&gt; <span class="php-quote">'8eb1b522'</span>,
+    <span class="php-quote">'first_name'</span> =&gt; <span class="php-quote">'John'</span>,
+    <span class="php-quote">'last_name'</span> =&gt; <span class="php-quote">'Doe'</span>,
+    <span class="php-quote">'email'</span> =&gt; <span class="php-quote">'john.doe@example.com'</span>
+);
+<span class="php-var">$client</span> = <span class="php-keyword1">new</span> Antavo\ApiClient(<span class="php-quote">'API_KEY'</span>, <span class="php-quote">'API_SECRET'</span>);
+<span class="php-keyword1">try</span> {
+    <span class="php-var">$result</span> = <span class="php-var">$client</span>-&gt;postEvent(<span class="php-quote">'opt_in'</span>, <span class="php-var">$customer</span>[<span class="php-quote">'id'</span>], <span class="php-keyword1">array</span>(
+        <span class="php-quote">'first_name'</span> =&gt; <span class="php-var">$customer</span>[<span class="php-quote">'first_name'</span>],
+        <span class="php-quote">'last_name'</span> =&gt; <span class="php-var">$customer</span>[<span class="php-quote">'last_name'</span>],
+        <span class="php-quote">'email'</span> =&gt; <span class="php-var">$customer</span>[<span class="php-quote">'email'</span>]
+    ));
+} <span class="php-keyword1">catch</span> (Antavo\RestClientException <span class="php-var">$e</span>) {
+    <span class="php-keyword1">echo</span> <span class="php-var">$e</span>-&gt;getMessage();
+}</pre>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Posts an event to the <a href="https://docs.antavo.com/api/events">Antavo
+Loyalty Events API</a>.</p>
+
+<pre><span class="php-var">$customer</span> = <span class="php-keyword1">array</span>(
+    <span class="php-quote">'id'</span> =&gt; <span class="php-quote">'8eb1b522'</span>,
+    <span class="php-quote">'first_name'</span> =&gt; <span class="php-quote">'John'</span>,
+    <span class="php-quote">'last_name'</span> =&gt; <span class="php-quote">'Doe'</span>,
+    <span class="php-quote">'email'</span> =&gt; <span class="php-quote">'john.doe@example.com'</span>
+);
+<span class="php-var">$client</span> = <span class="php-keyword1">new</span> Antavo\ApiClient(<span class="php-quote">'API_KEY'</span>, <span class="php-quote">'API_SECRET'</span>);
+<span class="php-keyword1">try</span> {
+    <span class="php-var">$result</span> = <span class="php-var">$client</span>-&gt;postEvent(<span class="php-quote">'opt_in'</span>, <span class="php-var">$customer</span>[<span class="php-quote">'id'</span>], <span class="php-keyword1">array</span>(
+        <span class="php-quote">'first_name'</span> =&gt; <span class="php-var">$customer</span>[<span class="php-quote">'first_name'</span>],
+        <span class="php-quote">'last_name'</span> =&gt; <span class="php-var">$customer</span>[<span class="php-quote">'last_name'</span>],
+        <span class="php-quote">'email'</span> =&gt; <span class="php-var">$customer</span>[<span class="php-quote">'email'</span>]
+    ));
+} <span class="php-keyword1">catch</span> (Antavo\RestClientException <span class="php-var">$e</span>) {
+    <span class="php-keyword1">echo</span> <span class="php-var">$e</span>-&gt;getMessage();
+}</pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$action</var></dt>
+					<dd>Action name.</dd>
+					<dt><var>$customer</var></dt>
+					<dd>Unique customer ID.</dd>
+					<dt><var>$data</var></dt>
+					<dd>Custom data to store with the event.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Antavo.RestClient.html#methods">Antavo\RestClient</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Antavo.RestClient.html#_getBaseUrl">getBaseUrl()</a>, 
+			<a href="class-Antavo.RestClient.html#_getLastError">getLastError()</a>, 
+			<a href="class-Antavo.RestClient.html#_getLastResult">getLastResult()</a>, 
+			<a href="class-Antavo.RestClient.html#_getLastResultHeaders">getLastResultHeaders()</a>, 
+			<a href="class-Antavo.RestClient.html#_getLastResultInfo">getLastResultInfo()</a>, 
+			<a href="class-Antavo.RestClient.html#_setBaseUrl">setBaseUrl()</a>, 
+			<a href="class-Antavo.RestClient.html#_setCurlOption">setCurlOption()</a>, 
+			<a href="class-Antavo.RestClient.html#_setCurlOptions">setCurlOptions()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary inherited">
+	<caption>Magic methods inherited from <a href="class-Antavo.RestClient.html#methods">Antavo\RestClient</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Antavo.RestClient.html#m_delete">delete()</a>, 
+			<a href="class-Antavo.RestClient.html#m_get">get()</a>, 
+			<a href="class-Antavo.RestClient.html#m_post">post()</a>, 
+			<a href="class-Antavo.RestClient.html#m_put">put()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+#!/bin/sh
+./vendor/apigen/apigen/bin/apigen generate --source src --destination docs --access-levels public --php
