@@ -37,6 +37,24 @@ class ApiClient extends RestClient {
     }
 
     /**
+     * Automatically opts customer in if consent cookie is present.
+     *
+     * @param string $customer  Unique customer ID.
+     * @param array $data  Custom data to store with the event. See
+     * {@link https://docs.antavo.com/api/events/opt_in event documentation}
+     * for required an optional keys.
+     * @return mixed
+     */
+    public function autoOptInCustomer($customer, array $data = array()) {
+        if (isset($_COOKIE['__alo']) && '1' == $_COOKIE['__alo']) {
+            $result = $this->optInCustomer($customer, $data);
+            setcookie('__alo', '2', 0, '/', implode('.', array_slice(explode('.', getenv('HTTP_HOST')), -2)));
+            $_COOKIE['__alo'] = '2';
+            return $result;
+        }
+    }
+
+    /**
      * {@inheritdoc}
      *
      * It automatically appends <tt>api_key</tt> and calculated signature to
