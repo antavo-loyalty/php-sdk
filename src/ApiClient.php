@@ -3,10 +3,8 @@ namespace Antavo;
 
 /**
  * Antavo Loyalty API client class.
- *
- * @final
  */
-final class ApiClient extends RestClient {
+class ApiClient extends RestClient {
     /**
      * {@inheritdoc}';
      */
