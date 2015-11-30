@@ -1,6 +1,8 @@
 <?php
 namespace Antavo;
 
+use Antavo\RestClient\RestClient;
+
 /**
  * Antavo Loyalty API client class.
  */
@@ -122,7 +124,7 @@ class ApiClient extends RestClient {
      *         'last_name' => $customer['last_name'],
      *         'email' => $customer['email']
      *     ));
-     * } catch (Antavo\RestClientException $e) {
+     * } catch (Antavo\RestClient\Exceptions\Exception $e) {
      *     echo $e->getMessage();
      * }
      * </code>

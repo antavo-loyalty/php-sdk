@@ -4,7 +4,9 @@
   "description": "Antavo Loyalty SDK for PHP",
   "license": "GPL-2.0",
   "require": {
-    "php": ">=5.3"
+    "php": ">=5.3",
+    "antavo/rest-client": "^1",
+    "antavo/signed-token": "^1"
   },
   "require-dev": {
     "apigen/apigen": "*",
