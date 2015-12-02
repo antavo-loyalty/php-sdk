@@ -15,7 +15,7 @@ class ApiClient extends RestClient {
     /**
      * @var string  Current client version
      */
-    protected $version = '1.0';
+    protected $version = '1.1.0';
 
     /**
      * @var string  Antavo Loyalty API key
