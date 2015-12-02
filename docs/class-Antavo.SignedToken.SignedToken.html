@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Antavo\SignedToken\SignedToken</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Antavo.html">
+						Antavo<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.RestClient.html">
+						RestClient<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.RestClient.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+							</ul></li>
+				<li class="active">
+					<a href="namespace-Antavo.SignedToken.html">
+						SignedToken<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.SignedToken.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-PHP.html">
+						PHP					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Antavo.SignedToken.SignedToken.html">SignedToken</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Antavo.SignedToken.html" title="Summary of Antavo\SignedToken"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SignedToken</h1>
+
+
+	<div class="description">
+	<p>Packs/unpacks a signed token with custom payload.</p>
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Antavo.CustomerToken.html">Antavo\CustomerToken</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Antavo.html">Antavo</a>\<a href="namespace-Antavo.SignedToken.html">SignedToken</a><br>
+		
+
+				<b>Example:</b>
+				<p>Creating a new token</p>
+
+<pre><span class="php-var">$token</span> = <span class="php-keyword1">new</span> Antavo\SignedToken\SignedToken(<span class="php-var">$token_secret</span>);
+<span class="php-var">$token</span>-&gt;setPayload(<span class="php-keyword1">array</span>(<span class="php-quote">'some_key'</span> =&gt; <span class="php-quote">'some_value'</span>));
+<span class="php-keyword1">echo</span> <span class="php-var">$token</span>-&gt;getToken();</pre><br>
+				<b>Example:</b>
+				<p>Extracting payload from a token string</p>
+
+<pre><span class="php-keyword1">try</span> {
+    <span class="php-var">$token</span> = <span class="php-keyword1">new</span> Antavo\SignedToken\SignedToken(<span class="php-var">$token_secret</span>);
+    <span class="php-var">$token</span>-&gt;setToken(<span class="php-var">$input_token</span>);
+    <span class="php-keyword2">var_dump</span>(<span class="php-var">$token</span>-&gt;getPayload());
+} <span class="php-keyword1">catch</span> (Antavo\SignedToken\Exceptions\Exception <span class="php-var">$e</span>) {
+    <span class="php-keyword1">echo</span> <span class="php-var">$e</span>-&gt;getMessage();
+}</pre><br>
+			<b>Located at</b> <a href="source-class-Antavo.SignedToken.SignedToken.html#4-317" title="Go to source code">signed-token/src/SignedToken.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#51-62" title="Go to source code">__construct</a>( <span>string <var>$secret</var> = <span class="php-keyword1">NULL</span></span>, <span>integer <var>$expires_at</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructs token object: sets secret string and expiration time.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructs token object: sets secret string and expiration time.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$secret</var></dt>
+					<dd><p>String to use for token digest calculation. If
+omitted the hardcoded default is used (<strong>not recommended</strong>).</p></dd>
+					<dt><var>$expires_at</var></dt>
+					<dd><p>Expiraton time as Unix timestamp. If omitted 0
+is used. See <code><a href="class-Antavo.SignedToken.SignedToken.html#_setExpirationTime">Antavo\SignedToken\SignedToken::setExpirationTime()</a></code> for details.</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#64-72" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			<p>Shorthand method for getting token string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Shorthand method for getting token string.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-Antavo.SignedToken.SignedToken.html#_getToken">Antavo\SignedToken\SignedToken::getToken()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAlgorithm" id="_getAlgorithm">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAlgorithm">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#109-116" title="Go to source code">getAlgorithm</a>( )</code>
+
+		<div class="description short">
+			<p>Returns algorithm used for creating the token digest.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns algorithm used for creating the token digest.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCalculatedExpirationTime" id="_getCalculatedExpirationTime">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCalculatedExpirationTime">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#118-130" title="Go to source code">getCalculatedExpirationTime</a>( )</code>
+
+		<div class="description short">
+			<p>Returns calculated expiration time.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns calculated expiration time.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br><p>If set value is a time-to-live value &mdash; meaning it's
+smaller than or equals to 30 days (in seconds) &mdash; it is offsetted
+with current time.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getExpirationTime" id="_getExpirationTime">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getExpirationTime">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#132-139" title="Go to source code">getExpirationTime</a>( )</code>
+
+		<div class="description short">
+			<p>Returns token expiration time as Unix Timestamp.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns token expiration time as Unix Timestamp.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPayload" id="_getPayload">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPayload">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#141-148" title="Go to source code">getPayload</a>( )</code>
+
+		<div class="description short">
+			<p>Returns payload data extracted from token string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns payload data extracted from token string.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSecret" id="_getSecret">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSecret">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#150-157" title="Go to source code">getSecret</a>( )</code>
+
+		<div class="description short">
+			<p>Returns secret string used to create the token digest.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns secret string used to create the token digest.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getToken" id="_getToken">
+
+		<td class="attributes"><code>
+			final public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getToken">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#159-174" title="Go to source code">getToken</a>( )</code>
+
+		<div class="description short">
+			<p>Returns token string. If a setter call occurred since last calculation,
+it regenerates the string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns token string. If a setter call occurred since last calculation,
+it regenerates the string.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isExpired" id="_isExpired">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isExpired">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#176-184" title="Go to source code">isExpired</a>( )</code>
+
+		<div class="description short">
+			<p>Tells if token expiration time had passed already.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Tells if token expiration time had passed already.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saltDigest" id="_saltDigest">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saltDigest">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#204-213" title="Go to source code">saltDigest</a>( <span>string <var>$digest</var></span> )</code>
+
+		<div class="description short">
+			<p>By overriding this method you can provide a custom mechanism to
+manipulate token digest before use.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>By overriding this method you can provide a custom mechanism to
+manipulate token digest before use.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$digest</var></dt>
+					<dd>Digest calculated from payload.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Salted digest that will be used for token.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAlgorithm" id="_setAlgorithm">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAlgorithm">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#215-229" title="Go to source code">setAlgorithm</a>( <span>string <var>$algorithm</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets algorithm used for creating the token digest.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets algorithm used for creating the token digest.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$algorithm</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code><br>Object instance for method chaining.
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/function.hash_algos">How to get a list of
+registered hashing algorithms?</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setExpirationTime" id="_setExpirationTime">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setExpirationTime">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#231-247" title="Go to source code">setExpirationTime</a>( <span>integer <var>$expires_at</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets expiration time for the token.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets expiration time for the token.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$expires_at</var></dt>
+					<dd><p>Unix Timestamp of expiration time. If given
+value is smaller than or equals to 30 days (in seconds) then it is
+handled as a relative time-to-live value. 0 means it will never expire.
+Float values are casted to integer, while non-numeric values are
+discarded.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPayload" id="_setPayload">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPayload">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#249-259" title="Go to source code">setPayload</a>( <span>array <var>$payload</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets payload data to embed into the token string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets payload data to embed into the token string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$payload</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code><br>Object instance for method chaining.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSecret" id="_setSecret">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSecret">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#261-273" title="Go to source code">setSecret</a>( <span>string <var>$secret</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets string to use for token digest calculation.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets string to use for token digest calculation.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$secret</var></dt>
+					<dd>Non-scalar values are discarded.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code><br>Object instance for method chaining.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setToken" id="_setToken">
+
+		<td class="attributes"><code>
+			final public 
+
+			<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setToken">#</a>
+		<code><a href="source-class-Antavo.SignedToken.SignedToken.html#275-316" title="Go to source code">setToken</a>( <span>string <var>$token</var></span> )</code>
+
+		<div class="description short">
+			<p>Restores an object state from token string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Restores an object state from token string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$token</var></dt>
+					<dd><p>Token string to process. Non-string values are
+discarded.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.SignedToken.SignedToken.html">Antavo\SignedToken\SignedToken</a></code><br>Object instance for method chaining.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Antavo.SignedToken.Exceptions.ExpiredException.html">Antavo\SignedToken\Exceptions\ExpiredException</a></code><br>
+					<code><a href="class-Antavo.SignedToken.Exceptions.InvalidPayloadException.html">Antavo\SignedToken\Exceptions\InvalidPayloadException</a></code><br>
+					<code><a href="class-Antavo.SignedToken.Exceptions.InvalidDigestException.html">Antavo\SignedToken\Exceptions\InvalidDigestException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

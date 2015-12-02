@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Antavo\CustomerToken</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Antavo.html">
+						Antavo<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.RestClient.html">
+						RestClient<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.RestClient.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Antavo.SignedToken.html">
+						SignedToken<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.SignedToken.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-PHP.html">
+						PHP					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Antavo.ApiClient.html">ApiClient</a></li>
+				<li class="active"><a href="class-Antavo.CustomerToken.html">CustomerToken</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Antavo.ApiClientException.html">ApiClientException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Antavo.html" title="Summary of Antavo"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CustomerToken</h1>
+
+
+	<div class="description">
+	<p>Manages customer authentication with a signed token.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Antavo.SignedToken.SignedToken.html"><span>Antavo\SignedToken\SignedToken</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Antavo\CustomerToken</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Antavo.html">Antavo</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Antavo.CustomerToken.html#6-149" title="Go to source code">CustomerToken.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="auth" id="_auth">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_auth">#</a>
+		<code><a href="source-class-Antavo.CustomerToken.html#17-33" title="Go to source code">auth</a>( <span>mixed <var>$customer</var></span>, <span>string <var>$secret</var></span>, <span>integer <var>$expires_in</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>Creates an authenticating token for customer and sets it in cookies.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates an authenticating token for customer and sets it in cookies.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$customer</var></dt>
+					<dd>Unique customer ID. Scalar values only.</dd>
+					<dt><var>$secret</var></dt>
+					<dd>API secret.</dd>
+					<dt><var>$expires_in</var></dt>
+					<dd><p>Time-to-live value for cookie (less than 30 days
+in seconds) or Unix Timestamp of the expiration time. Default is 0 (it
+expires with the session).</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br><p>Returns <tt>TRUE</tt> if cookie is set successfully,
+<tt>FALSE</tt> otherwise.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFromCookie" id="_createFromCookie">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Antavo.CustomerToken.html">Antavo\CustomerToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFromCookie">#</a>
+		<code><a href="source-class-Antavo.CustomerToken.html#35-52" title="Go to source code">createFromCookie</a>( <span>string <var>$secret</var></span> )</code>
+
+		<div class="description short">
+			<p>Creates token from cookie set previously.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates token from cookie set previously.</p>
+
+<p>Since <code><a href="class-Antavo.SignedToken.SignedToken.html#_setToken">Antavo\SignedToken\SignedToken::setToken()</a></code> is invoked during creation, exceptions may have
+thrown from here.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$secret</var></dt>
+					<dd>API secret.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.CustomerToken.html">Antavo\CustomerToken</a></code><br><p>Returns token extracted from cookie or <tt>NULL</tt> if
+cookie not found.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deauth" id="_deauth">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deauth">#</a>
+		<code><a href="source-class-Antavo.CustomerToken.html#54-61" title="Go to source code">deauth</a>( )</code>
+
+		<div class="description short">
+			<p>Alias of <code><a href="class-Antavo.CustomerToken.html#_removeCookie">Antavo\CustomerToken::removeCookie()</a></code>.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of <code><a href="class-Antavo.CustomerToken.html#_removeCookie">Antavo\CustomerToken::removeCookie()</a></code>.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCustomer" id="_getCustomer">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCustomer">#</a>
+		<code><a href="source-class-Antavo.CustomerToken.html#83-93" title="Go to source code">getCustomer</a>( )</code>
+
+		<div class="description short">
+			<p>Returns unique customer ID from payload.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns unique customer ID from payload.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>Returns customer ID if set, <tt>NULL</tt> otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeCookie" id="_removeCookie">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeCookie">#</a>
+		<code><a href="source-class-Antavo.CustomerToken.html#108-117" title="Go to source code">removeCookie</a>( )</code>
+
+		<div class="description short">
+			<p>Deletes cookie that identifies customer.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes cookie that identifies customer.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br><p>Returns <tt>TRUE</tt> if cookie unset successfully,
+<tt>FALSE</tt> otherwise.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCookie" id="_setCookie">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCookie">#</a>
+		<code><a href="source-class-Antavo.CustomerToken.html#119-134" title="Go to source code">setCookie</a>( )</code>
+
+		<div class="description short">
+			<p>Sets token in cookies.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets token in cookies.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br><p>Returns <tt>TRUE</tt> if cookie is set successfully,
+<tt>FALSE</tt> otherwise. <strong>Please note the difference from all other
+setter methods!</strong></p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCustomer" id="_setCustomer">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Antavo.CustomerToken.html">Antavo\CustomerToken</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCustomer">#</a>
+		<code><a href="source-class-Antavo.CustomerToken.html#136-148" title="Go to source code">setCustomer</a>( <span>mixed <var>$customer</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets unique customer ID for payload.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets unique customer ID for payload.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$customer</var></dt>
+					<dd><p>Unique customer ID. Non-scalar values are
+discarded.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.CustomerToken.html">Antavo\CustomerToken</a></code><br>Object instance for method chaining.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Antavo.SignedToken.SignedToken.html#methods">Antavo\SignedToken\SignedToken</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Antavo.SignedToken.SignedToken.html#___construct">__construct()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#___toString">__toString()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_getAlgorithm">getAlgorithm()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_getCalculatedExpirationTime">getCalculatedExpirationTime()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_getExpirationTime">getExpirationTime()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_getPayload">getPayload()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_getSecret">getSecret()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_getToken">getToken()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_isExpired">isExpired()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_saltDigest">saltDigest()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_setAlgorithm">setAlgorithm()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_setExpirationTime">setExpirationTime()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_setPayload">setPayload()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_setSecret">setSecret()</a>, 
+			<a href="class-Antavo.SignedToken.SignedToken.html#_setToken">setToken()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="COOKIE_NAME" id="COOKIE_NAME">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-Antavo.CustomerToken.html#10-15" title="Go to source code"><b>COOKIE_NAME</b></a>
+			</code>
+
+			<div class="description short">
+				<p>Name of the cookie under which customer token is stored.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Name of the cookie under which customer token is stored.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#COOKIE_NAME" class="anchor">#</a>
+				<code><span class="php-quote">'__alc'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

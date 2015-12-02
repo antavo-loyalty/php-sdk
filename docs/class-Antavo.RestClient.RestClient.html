@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Antavo\RestClient\RestClient</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Antavo.html">
+						Antavo<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Antavo.RestClient.html">
+						RestClient<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.RestClient.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Antavo.SignedToken.html">
+						SignedToken<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.SignedToken.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-PHP.html">
+						PHP					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Antavo.RestClient.RestClient.html">RestClient</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Antavo.RestClient.html" title="Summary of Antavo\RestClient"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RestClient</h1>
+
+
+	<div class="description">
+	<p>A rather straightforward and lightweight, yet flexible helper class to
+perform operations on a RESTful API with cURL.</p>
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Antavo.ApiClient.html">Antavo\ApiClient</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Antavo.html">Antavo</a>\<a href="namespace-Antavo.RestClient.html">RestClient</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Antavo.RestClient.RestClient.html#4-340" title="Go to source code">rest-client/src/RestClient.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="call" id="_call">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_call">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#64-160" title="Go to source code">call</a>( <span>string <var>$method</var></span>, <span>string <var>$url</var></span>, <span>array|string <var>$data</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$curl_options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Performs an API request.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs an API request.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd>HTTP method to use.</dd>
+					<dt><var>$url</var></dt>
+					<dd><p>URL to send request to. It is prefixed with
+the <tt>base_url</tt> unless it starts with a URL scheme.</p></dd>
+					<dt><var>$data</var></dt>
+					<dd><p>Data to send with request. It is sent as a
+request entity where allowed, or appended as a query string otherwise.</p></dd>
+					<dt><var>$curl_options</var></dt>
+					<dd><p>Additional cURL options for current request
+only.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Antavo.RestClient.Exceptions.Exception.html">Antavo\RestClient\Exceptions\Exception</a></code><br><p>If an error occurred
+during processing response.</p>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBaseUrl" id="_getBaseUrl">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBaseUrl">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#174-181" title="Go to source code">getBaseUrl</a>( )</code>
+
+		<div class="description short">
+			<p>Returns base URL prepended to relative URL's for each request.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns base URL prepended to relative URL's for each request.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastError" id="_getLastError">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Antavo.RestClient.Exceptions.Exception.html">Antavo\RestClient\Exceptions\Exception</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastError">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#183-191" title="Go to source code">getLastError</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the last error occurred during processing the response.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the last error occurred during processing the response.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Antavo.RestClient.Exceptions.Exception.html">Antavo\RestClient\Exceptions\Exception</a></code><br><p>Returns <tt>NULL</tt>
+if there was no error.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastResult" id="_getLastResult">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastResult">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#193-201" title="Go to source code">getLastResult</a>( )</code>
+
+		<div class="description short">
+			<p>Returns body of last response, parsed according to
+<tt>Content-Type</tt> header.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns body of last response, parsed according to
+<tt>Content-Type</tt> header.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastResultHeaders" id="_getLastResultHeaders">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastResultHeaders">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#203-210" title="Go to source code">getLastResultHeaders</a>( )</code>
+
+		<div class="description short">
+			<p>Returns headers of last response.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns headers of last response.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastResultInfo" id="_getLastResultInfo">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastResultInfo">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#212-220" title="Go to source code">getLastResultInfo</a>( )</code>
+
+		<div class="description short">
+			<p>Returns info on last request.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns info on last request.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>For details see PHP <tt>curl_getinfo()</tt> manual.
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/curl_getinfo">PHP: curl_getinfo - Manual</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCurlOption" id="_setCurlOption">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCurlOption">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#286-301" title="Go to source code">setCurlOption</a>( <span>string <var>$option</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>Appends cURL option to defaults.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Appends cURL option to defaults.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$option</var></dt>
+					<dd>Option name. See cURL options for option names.</dd>
+					<dt><var>$value</var></dt>
+					<dd><p>Option value. Providing a <tt>NULL</tt> removes an
+already set option.</p></dd>
+				</dl></div>
+
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/curl_setopt">List of cURL options.</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCurlOptions" id="_setCurlOptions">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCurlOptions">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#303-316" title="Go to source code">setCurlOptions</a>( <span>array <var>$options</var></span> )</code>
+
+		<div class="description short">
+			<p>Appends multiple cURL options to defaults.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Appends multiple cURL options to defaults.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$options</var></dt>
+					<dd><p>cURL options as key-value pairs. For keys and
+their values see cURL options. Providing a <tt>NULL</tt> value removes
+an already set option.</p></dd>
+				</dl></div>
+
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/curl_setopt">List of cURL options.</a><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBaseUrl" id="_setBaseUrl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBaseUrl">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#318-325" title="Go to source code">setBaseUrl</a>( <span>string <var>$base_url</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets base URL which is to prepend to relative URL's for each request.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets base URL which is to prepend to relative URL's for each request.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$base_url</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setError" id="_setError">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setError">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#327-339" title="Go to source code">setError</a>( <span><code><a href="class-Antavo.RestClient.Exceptions.Exception.html">Antavo\RestClient\Exceptions\Exception</a></code> <var>$exception</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			<p>Used to set an error without exiting the normal flow of an API call.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Used to set an error without exiting the normal flow of an API call.</p>
+
+<p>Calling without argument or with a <tt>NULL</tt> value resets the stored
+last error.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$exception</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-Antavo.RestClient.RestClient.html#_getLastError">Antavo\RestClient\RestClient::getLastError()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary methods" id="magicMethods">
+	<caption>Magic methods summary</caption>
+	<tr data-order="get" id="m_get">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_get">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#8-9" title="Go to source code">get</a>( <span>string <var>$url</var></span>, <span>mixed <var>$data</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$curl_options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Performs a GET request to the API.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs a GET request to the API.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd></dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$curl_options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="post" id="m_post">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_post">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#10-11" title="Go to source code">post</a>( <span>string <var>$url</var></span>, <span>mixed <var>$data</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$curl_options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Performs a POST request to the API.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs a POST request to the API.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd></dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$curl_options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="put" id="m_put">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_put">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#12-13" title="Go to source code">put</a>( <span>string <var>$url</var></span>, <span>mixed <var>$data</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$curl_options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Performs a PUT request to the API.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs a PUT request to the API.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd></dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$curl_options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="m_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_delete">#</a>
+		<code><a href="source-class-Antavo.RestClient.RestClient.html#14-15" title="Go to source code">delete</a>( <span>string <var>$url</var></span>, <span>mixed <var>$data</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$curl_options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Performs a DELETE request to the API.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs a DELETE request to the API.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd></dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$curl_options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
