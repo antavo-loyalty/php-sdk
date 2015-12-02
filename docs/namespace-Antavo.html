@@ -20,9 +20,34 @@
 			<ul>
 				<li class="active">
 					<a href="namespace-Antavo.html">
-						Antavo					</a>
+						Antavo<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.RestClient.html">
+						RestClient<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.RestClient.Exceptions.html">
+						Exceptions					</a>
 
 						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-Antavo.SignedToken.html">
+						SignedToken<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Antavo.SignedToken.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+							</ul></li></ul></li>
 				<li>
 					<a href="namespace-PHP.html">
 						PHP					</a>
@@ -38,8 +63,7 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Antavo.ApiClient.html">ApiClient</a></li>
-				<li><a href="class-Antavo.RestClient.html">RestClient</a></li>
-				<li><a href="class-Antavo.Token.html">Token</a></li>
+				<li><a href="class-Antavo.CustomerToken.html">CustomerToken</a></li>
 			</ul>
 
 
@@ -47,13 +71,6 @@
 			<h3>Exceptions</h3>
 			<ul>
 				<li><a href="class-Antavo.ApiClientException.html">ApiClientException</a></li>
-				<li><a href="class-Antavo.ExpiredTokenException.html">ExpiredTokenException</a></li>
-				<li><a href="class-Antavo.InvalidTokenDataException.html">InvalidTokenDataException</a></li>
-				<li><a href="class-Antavo.InvalidTokenException.html">InvalidTokenException</a></li>
-				<li><a href="class-Antavo.RestClientException.html">RestClientException</a></li>
-				<li><a href="class-Antavo.RestClientParserException.html">RestClientParserException</a></li>
-				<li><a href="class-Antavo.RestClientStatusCodeException.html">RestClientStatusCodeException</a></li>
-				<li><a href="class-Antavo.TokenException.html">TokenException</a></li>
 			</ul>
 
 
@@ -90,6 +107,15 @@
 <div id="content" class="namespace">
 	<h1>Namespace Antavo</h1>
 
+	<table class="summary" id="namespaces">
+	<caption>Namespaces summary</caption>
+	<tr>
+		<td class="name"><a href="namespace-Antavo.RestClient.html">Antavo\RestClient</a></td>
+	</tr>
+	<tr>
+		<td class="name"><a href="namespace-Antavo.SignedToken.html">Antavo\SignedToken</a></td>
+	</tr>
+	</table>
 
 
 <table class="summary" id="classes">
@@ -99,13 +125,8 @@
 	<td>Antavo Loyalty API client class.</td>
 </tr>
 <tr>
-	<td class="name"><a href="class-Antavo.RestClient.html">RestClient</a></td>
-	<td><p>A rather straightforward and lightweight, yet flexible helper class to
-perform operations on a RESTful API with cURL.</p></td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Antavo.Token.html">Token</a></td>
-	<td>Packs/unpacks a signed token with custom data.</td>
+	<td class="name"><a href="class-Antavo.CustomerToken.html">CustomerToken</a></td>
+	<td>Manages customer authentication with a signed token.</td>
 </tr>
 </table>
 
@@ -117,38 +138,6 @@ perform operations on a RESTful API with cURL.</p></td>
 	<td class="name"><a href="class-Antavo.ApiClientException.html">ApiClientException</a></td>
 	<td>Exception thrown when Antavo Loyalty API JSON response contains an error.</td>
 </tr>
-<tr>
-	<td class="name"><a href="class-Antavo.ExpiredTokenException.html">ExpiredTokenException</a></td>
-	<td>Exception thrown when a token is expired.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Antavo.InvalidTokenDataException.html">InvalidTokenDataException</a></td>
-	<td>Exception thrown when a token integrity check fails.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Antavo.InvalidTokenException.html">InvalidTokenException</a></td>
-	<td>Exception thrown when a token integrity check fails.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Antavo.RestClientException.html">RestClientException</a></td>
-	<td><p>Abstract exception extended by all exceptions thrown from
-<code><a href="class-Antavo.RestClient.html">Antavo\RestClient</a></code> when an error occurs during processing REST API
-response.</p></td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Antavo.RestClientParserException.html">RestClientParserException</a></td>
-	<td><p>Exception thrown when parsing response body fails either because of an
-invalid (or incomplete) body or a mismatching <tt>Content-Type</tt> header.</p></td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Antavo.RestClientStatusCodeException.html">RestClientStatusCodeException</a></td>
-	<td>Exception thrown when response has a status code other than <tt>200 OK</tt>.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-Antavo.TokenException.html">TokenException</a></td>
-	<td><p>An ancestor class for all exception types thrown when working with
-<code><a href="class-Antavo.Token.html">Antavo\Token</a></code> objects.</p></td>
-</tr>
 </table>
 
 
@@ -159,7 +148,7 @@ invalid (or incomplete) body or a mismatching <tt>Content-Type</tt> header.</p><
 	</div>
 </div>
 </div>
-<script src="resources/combined.js?fa2546c2efedc385590204f795dda2dff829a321"></script>
-<script src="elementlist.js?a6d526bc766337bfc04d7791d7a10af4d6699051"></script>
+<script src="resources/combined.js?2ac18420ae4a83bc9c6c7bf3a9aa7f8fc240729a"></script>
+<script src="elementlist.js?7f11c182dec14774d0c55db6a8a16d198f62fea1"></script>
 </body>
 </html>
