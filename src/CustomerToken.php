@@ -4,7 +4,7 @@ namespace Antavo;
 use Antavo\SignedToken\SignedToken;
 
 /**
- *
+ * Manages customer authentication with a signed token.
  */
 class CustomerToken extends SignedToken {
     /**
