@@ -65,6 +65,7 @@ class CustomerToken extends SignedToken {
      *
      * @return string
      * @static
+     * @internal
      */
     public static function getCookieDomain() {
         static $domain;
@@ -95,6 +96,7 @@ class CustomerToken extends SignedToken {
      * Returns expiration time for cookie based on token expiration setting.
      *
      * @return int
+     * @internal
      */
     public function getCookieExpirationTime() {
         if ($this->expires_at > 0) {
