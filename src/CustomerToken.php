@@ -8,7 +8,9 @@ use Antavo\SignedToken\SignedToken;
  */
 class CustomerToken extends SignedToken {
     /**
-     * @var string  Name of the cookie under which customer token is stored.
+     * Name of the cookie under which customer token is stored.
+     *
+     * @var string
      */
     const COOKIE_NAME = '__alc';
 
