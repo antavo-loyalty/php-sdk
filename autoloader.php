@@ -1,6 +1,8 @@
 <?php
 /**
  * Autoloader for Antavo Loyalty API PHP SDK.
+ *
+ * You only need this if you are using the zipped version.
  */
 spl_autoload_register(function(/*string*/ $class) {
     $pattern = '/^\\\?Antavo\\\/';
